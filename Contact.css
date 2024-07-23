@@ -1,0 +1,382 @@
+@font-face {
+  font-family: bigone;
+  src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+@font-face {
+  font-family: lightone;
+  font-weight: 100;
+  src: url(./NeueHaasDisplayLight.ttf);
+}
+
+@font-face {
+  font-family: mediumone;
+  font-weight: 200;
+  src: url(./NeueHaasDisplayRoman.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  z-index: 10;
+
+  position: relative;
+}
+#page1 {
+  height: 20vh;
+  width: 100%;
+  background-color: #efeae3;
+  position: relative;
+  padding: 0 2vw;
+}
+nav {
+  padding: 2vw 0vw;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  justify-content: space-between;
+}
+nav .rightnav {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+nav .rightnav h3 {
+  padding: 10px 20px;
+  border: 1px solid #0000003c;
+  border-radius: 50px;
+  font-weight: 500;
+  color: #000000bb;
+  transition: all ease 0.4s;
+  position: relative;
+  font-size: 18px;
+  overflow: hidden;
+}
+nav .rightnav h3::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+}
+
+nav .rightnav h3:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+nav .rightnav h3 a {
+  color: #000000bb;
+  text-decoration: none;
+  position: relative;
+  z-index: 9;
+}
+
+nav .rightnav h3:hover a {
+  color: #fff;
+}
+#page2 {
+  min-height: 120vh;
+  width: 100%;
+  background-color: #efeae3;
+  position: relative;
+  z-index: 9;
+}
+#page2 .container {
+  padding-top: 130px;
+  padding-left: 90px;
+  position: relative;
+  z-index: 9;
+}
+.circle-container {
+  width: 450px; /* Adjust size as needed */
+  height: 450px; /* Ensure this is the same as width */
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#right h1 {
+  font-size: 16vh;
+  font-family: bigone;
+  padding-right: 90px;
+  text-align: right;
+  font-weight: bolder;
+  line-height: 13.5vh;
+  z-index: -1;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#right h2 {
+  font-family: bigone;
+  padding-right: 90px;
+  text-align: right;
+  padding-top: 18px;
+  text-decoration: none;
+  color: black;
+  z-index: 2;
+}
+#right h2:hover {
+  border-bottom: 2px solid black;
+z-index: 2;
+  transition: ease-in-out 0.1s;
+  cursor: pointer;
+}
+#right h2 a {
+  text-decoration: none;
+  color: black;
+  z-index: 2;
+  position: relative;
+}
+#right h4 a {
+  font-family: bigone;
+  color: black;
+  font-size: 4vh;
+  font-weight: lighter;
+  padding-right: 10px;
+  text-decoration: none;
+  border-bottom: 1px solid grey;
+  line-height: 8vh;
+  position: relative;
+  z-index: 2;
+}
+
+#page2 .sround {
+  height: 24vw;
+  width: 24vw;
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to top, #FE3D0E, #ff8d0b);
+  /* background: linear-gradient(to top right,red,blue); */
+
+  z-index: 1;
+  top: 39%;
+  left: 50%;
+  filter: blur(20px);
+  animation-name: sround;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes sround {
+  from {
+    filter: blur(20px);
+    transform: translate(10%, -10%) skew(0);
+  }
+
+  to {
+    filter: blur(30px);
+    transform: translate(-10%, 10%) skew(-12deg);
+  }
+}
+
+#page7 {
+  min-height: 120vh;
+  width: 100%;
+  position: relative;
+}
+#footer {
+  position: fixed;
+  height: 105vh;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  z-index: 9;
+  bottom: 0;
+  display: flex;
+  /* align-items: flex-end; */
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 1vw 3vw;
+}
+
+#footer h1 {
+  font-size: 23vw;
+  font-family: bigone;
+  position: relative;
+  z-index: 10;
+}
+
+#footer-div {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+  z-index: 10;
+}
+
+#shape {
+  height: 50%;
+  width: 100%;
+  border-top-left-radius: 80%;
+  border-bottom-left-radius: 80%;
+  background-color: #fe330a;
+  position: absolute;
+  filter: blur(20px);
+  padding-bottom: 700%;
+}
+#shape1 {
+  background: linear-gradient(#fe320a, #fe3f0a);
+
+  height: 50%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  animation-name: anime2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  filter: blur(25px);
+  padding-bottom: 50%;
+}
+#shape2 {
+  background: linear-gradient(#fe320a, #fe3f0a);
+
+  height: 50%;
+  width: 100%;
+  border-radius: 10%;
+  position: absolute;
+  animation-name: anime1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  filter: blur(25px);
+  padding-bottom: 50%;
+}
+@keyframes anime1 {
+  from {
+    transform: translate(5%, -3%);
+  }
+
+  to {
+    transform: translate(0%, 10%);
+  }
+}
+
+@keyframes anime2 {
+  from {
+    transform: translate(5%, -5%);
+  }
+
+  to {
+    transform: translate(-20%, 30%);
+  }
+}
+
+#footer-div .two {
+  padding-left: 4%;
+  font-family: bigone;
+  font-size: 5vh;
+  position: relative;
+  z-index: 10;
+}
+#footer-div #one {
+  padding-left: 55%;
+  position: relative;
+  z-index: 10;
+}
+#footer-bottom {
+  border-top: 1px solid #dadada;
+  height: 10vh;
+  width: 100%;
+  font-family: smallone;
+  display: flex;
+  gap: 14vw;
+  padding-top: 2%;
+  position: relative;
+}
+#footer-bottom h2 a {
+  text-decoration: none;
+  color: #dadada;
+}
+#footer-bottom h2:hover a {
+  border-bottom: 2px solid white;
+  transition: ease-in-out 0.4s;
+}
+
+input[type="email"] {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  background-color: #fe3f0a;
+  outline: none;
+  transition: border-color 0.3s ease;
+  position: relative;
+}
+
+input[type="email"]:focus {
+  border-color: #66afe9;
+}
+
+input[type="email"]::placeholder {
+  color: #999;
+}
+
+input[type="email"]::after {
+  content: "|";
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+input[type="email"]:hover::after {
+  content: "|";
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+#full-scr {
+  height: 100vh;
+  width: 100%;
+  background-color: #00000070;
+  position: fixed;
+  z-index: 99;
+  top: -100%;
+  transition: all ease 0.5s;
+}
+
+#full-div1 {
+  height: 50%;
+  width: 100%;
+  background-color: #efeae3;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
