@@ -8,3 +8,5 @@
  LOCOMOTIVE JS(for smooth scrolling)
  SCROLLTRIGGER
  SWIPER JS(https://swiperjs.com/)
+link for cloned website-"https://pranavdhummansure.github.io/sundown/"
+not responive only for screens (1000px+).
